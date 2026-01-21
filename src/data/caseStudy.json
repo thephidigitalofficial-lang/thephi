@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "title": "Clout",
+        "subtitle": "People Intelligence System",
+        "description": "Clout is an advanced People Intelligence System designed to eliminate hiring bias by quantifying psychometric traits and core business competencies. Through a series of rapid, high-engagement assessments, the platform evaluates a candidate's tenacity and professional grit in real-time. This data-driven approach allows organizations to move beyond static CVs and make precise talent decisions based on predictive human science. The system features a sophisticated analytics engine that visualizes individual growth and alignment with company culture. By streamlining the evaluation process, Clout bridges the gap between raw potential and organizational excellence.",
+        "skills": "Design & Development",
+        "technology": "MERN Stack, MongoDB, Express.js, React.js, Node.js, Google Cloud Platform (GCP), Firebase.",
+        "status": "Delivered and Ongoing Maintenance",
+        "image": "/images/projects/clout.jpg"
+    },
+    {
+        "id": 2,
+        "title": "MedFlow",
+        "subtitle": "Agentic Medical Marketplace",
+        "description": "MedFlow defines a new era of inclusive e-commerce by utilizing an Agentic AI approach tailored for post-surgery recovery. Designed for the elderly and those with limited mobility, the system allows users to rent or purchase critical medical equipment—such as wheelchairs and specialized beds—entirely through natural voice interaction. By replacing traditional, complex navigation with a \"voice-and-intent\" model, the AI agent proactively identifies support products based on the user's specific recovery requirements. The platform prioritizes extreme accessibility, ensuring that patients in pain can secure life-saving equipment without the physical strain of manual browsing. This innovation bridges the gap between sophisticated healthcare technology and the physical limitations of those who need it most.",
+        "skills": "AI Agentic Market Place",
+        "technology": "AI Agentic Models, Web Speech API, MERN Stack, MongoDB, Node.js, React.js, Google Cloud Platform (GCP), Tailwind CSS, Framer Motion.",
+        "status": "Ongoing",
+        "image": "/images/projects/medFlow.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Creative Space Studio",
+        "subtitle": "Digital Portfolio & Brand Showcase",
+        "description": "Creative Space Studio is a specialized design house renowned for high-end branding and packaging within the Food & Beverage (F&B) industry and various luxury segments. We developed a robust, dynamic website designed to mirror their artistic precision, providing a high-performance stage for their expansive portfolio. The platform features immersive galleries and seamless transitions that highlight their expertise in turning consumer products into iconic brands. By balancing heavy visual content with optimized load speeds, the site ensures that their award-winning work remains the focal point for global clients. This digital ecosystem serves as a powerful business development tool, blending aesthetic sophistication with structural reliability to capture the essence of their creative vision.",
+        "skills": "Website Development",
+        "technology": "HTML5, CSS3, JavaScript (ES6+), WordPress (Custom CMS), PHP, MySQL, GSAP (for smooth animations), Responsive Design Frameworks.",
+        "status": "2 months",
+        "image": "/images/projects/creative.jpg"
+    },
+    {
+        "id": 4,
+        "title": "BuildLogic",
+        "subtitle": "Construction Intelligence Solution",
+        "description": "BuildLogic is a comprehensive Project Intelligence System engineered specifically for the large-scale construction industry. The platform centralizes the entire project lifecycle, from initial registration and automated internal approval workflows to granular on-site management. It streamlines complex procurement cycles and supply chain logistics, ensuring that materials and equipment are tracked with precision. By integrating team management and resource allocation into a single source of truth, the system eliminates administrative bottlenecks and reduces operational risks. Designed for high-stakes environments, BuildLogic empowers construction firms to maintain rigorous oversight over budgets, timelines, and safety compliance across multiple active sites.",
+        "skills": "ERP Architecture, Workflow Automation, Procurement Logic Design, User Access Control (RBAC), Resource Management Modules, Dashboard Analytics.",
+        "technology": "MERN Stack (MongoDB, Express.js, React, Node.js), Redux for State Management, AWS S3 for Document Storage, Google Cloud Platform (GCP), RESTful API Integration, JWT Authentication.",
+        "status": "Developed and Ongoing Maintenance",
+        "image": "/images/projects/buildLogic.jpg"
+    }
+]

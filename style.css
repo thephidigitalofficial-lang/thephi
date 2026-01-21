@@ -1,0 +1,48 @@
+body {
+  background: black;
+}
+
+.fancy-button {
+  background-color: black;
+  -webkit-backdrop-filter: blur(100px);
+  backdrop-filter: blur(100px);
+  color: white;
+  text-align: center;
+  white-space: nowrap;
+  border: 1px solid #ffaaaaff;
+  border-radius: 12px;
+  align-items: center;
+  width: 250px;
+  margin-bottom: 0;
+  margin-right: 0;
+  padding: 1.2em 2.2em;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.5s;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.fancy-button:hover {
+  background-color: #001231;
+  transform: scale(1.03);
+}
+
+.fancy-btn-glow {
+  z-index: -1;
+  filter: blur(5px);
+  mix-blend-mode: lighten;
+  width: 100%;
+  position: absolute;
+  top: 40%;
+  left: -49%;
+}
+
+.btn-inner-shadow {
+  pointer-events: none;
+  position: absolute;
+  inset: 0%;
+  box-shadow: inset 0 4px 22px #ec2d2dff;
+}
