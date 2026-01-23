@@ -1,6 +1,6 @@
 export const networkCall = async (endPoint, body, { method = "POST" } = {}) => {
   const response = await fetch(
-    `https://nodejs-app-754042928988.asia-south1.run.app${endPoint}`,
+    `https://phi-backend-production-69cd.up.railway.app/${endPoint}`,
     {
       method: method,
       headers: {
