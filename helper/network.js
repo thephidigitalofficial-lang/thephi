@@ -1,6 +1,6 @@
 export const networkCall = async (endPoint, body, { method = "POST" } = {}) => {
   const response = await fetch(
-    `https://phi-backend-production-69cd.up.railway.app/${endPoint}`,
+    `https://phi-backend-production-69cd.up.railway.app${endPoint}`,
     {
       method: method,
       headers: {
