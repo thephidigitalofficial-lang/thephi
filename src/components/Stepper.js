@@ -1,7 +1,6 @@
 import React, { useCallback, useEffect, useState, useMemo } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Image from "next/image";
-import stepperImage from "@/../public/images/stepper.png";
 import { motion } from "framer-motion";
 import TextFadeUpScroll from "./animations/TextFadeUpScroll";
 
@@ -16,27 +15,23 @@ function Stepper() {
       description:
         "We begin by listening to your vision, studying your challenges, and understanding your goals. This helps us uncover opportunities and set the right foundation.",
       image: '/images/stepper/discover.jpg',
-      // "https://placehold.co/800x800/d9a896/000000?text=Discover",
     },
     {
       title: "Strategize & Plan",
       description:
         "Based on our understanding, we develop a comprehensive strategy and a detailed plan. This roadmap outlines the key actions and milestones for your project's success.",
-      // image: "https://placehold.co/800x800/a29283/000000?text=Strategize",
       image: '/images/stepper/stratergy.jpg',
     },
     {
       title: "Build & Innovate",
       description:
         "Our team of experts begins the development process, bringing your vision to life with precision and creativity. We focus on building a robust and innovative solution.",
-      // image: "https://placehold.co/800x800/7c706c/000000?text=Build",
       image: '/images/stepper/build.jpg',
     },
     {
       title: "Launch & Optimize",
       description:
         "After rigorous testing, we launch your solution. Our work doesn't stop there; we continuously monitor, gather feedback, and optimize to ensure long-term performance and growth.",
-      // image: "https://placehold.co/800x800/615a57/000000?text=Launch",
       image: '/images/stepper/launch.jpg',
     },
   ], []);
@@ -108,12 +103,27 @@ function Stepper() {
 
           <div className="flex justify-center items-center">
             <div className="relative w-full aspect-square overflow-hidden rounded-3xl shadow-xl">
-              <Image
-                src={currentStep.image}
-                alt={`Visual for ${currentStep.title}`}
-                fill
-                className="object-cover transition-transform duration-500 ease-in-out transform scale-100 hover:scale-105"
-              />
+              {stepsData.map((step, index) => (
+                <motion.div
+                  key={index}
+                  className="absolute inset-0"
+                  initial={false}
+                  animate={{
+                    opacity: currentStepIndex === index ? 1 : 0,
+                    scale: currentStepIndex === index ? 1 : 1.05,
+                    filter: currentStepIndex === index ? "blur(0px)" : "blur(10px)",
+                  }}
+                  transition={{ duration: 0.8, ease: "easeInOut" }}
+                >
+                  <Image
+                    src={step.image}
+                    alt={`Visual for ${step.title}`}
+                    fill
+                    priority={index === 0}
+                    className="object-cover"
+                  />
+                </motion.div>
+              ))}
             </div>
           </div>
 

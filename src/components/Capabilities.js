@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { AnimatePresence, hover, motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import GradientButton from "./GradientButton";
 import TextFadeUpScroll from "./animations/TextFadeUpScroll";
@@ -47,7 +47,7 @@ export default function Capabilities({ services: initialServices = [] }) {
               </p>
             </div>
 
-            <div className="flex flex-col md:flex-row   w-full justify-between">
+            <div className="flex flex-col md:flex-row    w-full justify-between">
               <ul className="  z-10 space-y-8 md:space-y-12">
                 {capabilities.map((item, index) => (
                   <motion.li
@@ -66,27 +66,26 @@ export default function Capabilities({ services: initialServices = [] }) {
                     </h2>
 
 
-                    <div className="max-xl:hidden">
-                      <AnimatePresence>
-                        {hoveredItem === item && (
-                          <motion.div
-                            initial={{ opacity: 0, x: 20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            exit={{ opacity: 0, x: 20 }}
-                            transition={{ duration: 0.3 }}
-                            className="absolute left-full top-1/2 -translate-y-1/2 ml-4 w-[28rem] md:w-[14rem]"
-                          >
-                            <Image
-                              width={300}
-                              height={300}
-                              key={hoveredItem.image}
-                              src={getSanityImageUrl(hoveredItem.image)}
-                              alt="hovered image"
-                              className="pointer-events-none z-10 h-[200px] w-[250px] select-none rounded-xl object-cover shadow-xl"
-                            />
-                          </motion.div>
+                    <div className="max-xl:hidden pointer-events-none">
+                      <motion.div
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{
+                          opacity: hoveredItem === item ? 1 : 0,
+                          x: hoveredItem === item ? 0 : 20
+                        }}
+                        transition={{ duration: 0.3 }}
+                        className="absolute left-full top-1/2 -translate-y-1/2 ml-4 w-[28rem] md:w-[14rem]"
+                      >
+                        {item.image && (
+                          <Image
+                            width={300}
+                            height={300}
+                            src={getSanityImageUrl(item.image)}
+                            alt={item.text}
+                            className="pointer-events-none z-10 h-[200px] w-[250px] select-none rounded-xl object-cover shadow-xl"
+                          />
                         )}
-                      </AnimatePresence>
+                      </motion.div>
                     </div>
                   </motion.li>
                 ))}

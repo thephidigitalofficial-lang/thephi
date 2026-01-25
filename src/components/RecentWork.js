@@ -70,10 +70,9 @@ export default function RecentWork({
     target: ref,
     offset: ["start 0.8", "end 0.1"],
   });
-  const extendedScroll = useTransform(
-    scrollYProgress,
-    (v) => v + 130 / ref?.current?.offsetHeight
-  );
+  // useTransform(scrollYProgress, (v) => v + 130 / ref?.current?.offsetHeight) was causing the line to go "beyond"
+  const extendedScroll = useTransform(scrollYProgress, (v) => v + 130 / ref?.current?.offsetHeight)
+  // scrollYProgress;
 
 
   const { id } = router.query;
@@ -105,39 +104,36 @@ export default function RecentWork({
             </motion.div>
           </div>
         )}
-        <div className=" overflow-hidden ">
-          {showTimeLine && (
-            <div className=" z-10 w-full h-full  bg-blue-300  ">
-              <div className="absolute left-1/2  -translate-x-1/2 inset-y-0 w-[1px] bg-[#30303D] rounded-full"></div>
-              <div className="absolute left-75 max-xl:left-20  -translate-x-1/2 top-0 inset-y-0 w-[1px] bg-[#30303D] rounded-full"></div>
-              <div className="absolute right-75 max-xl:right-20 top-0 -translate-x-1/2 inset-y-0 w-[1px] bg-[#30303D] rounded-full"></div>
+        {showTimeLine && (
+          <div className="absolute inset-0 z-20 pointer-events-none overflow-hidden ">
+            <div className="absolute left-1/2  -translate-x-1/2 inset-y-0 w-[1px] bg-[#30303D] rounded-full"></div>
+            <div className="absolute left-75 max-xl:left-20  -translate-x-1/2 top-0 inset-y-0 w-[1px] bg-[#30303D] rounded-full"></div>
+            <div className="absolute right-75 max-xl:right-20 top-0 -translate-x-1/2 inset-y-0 w-[1px] bg-[#30303D] rounded-full"></div>
 
-              <motion.div
-                style={{ scaleY: scrollYProgress }}
-                className="absolute left-75 max-xl:left-20 -translate-x-1/2 top-0 inset-y-0 w-[1px] 
-      bg-gradient-to-b from-[#FF773C80] via-[#FF773C80] to-[#FF773C50] 
-      origin-top rounded-full"
-              />
-              <motion.div
-                style={{ scaleY: extendedScroll }}
-                className="absolute left-1/2 -translate-x-1/2 inset-y-0 w-[1px] 
-      bg-gradient-to-b from-[#FF773C80] via-[#FF773C80] to-[#FF773C50] 
-      origin-top rounded-full z-10"
-              />
+            <motion.div
+              style={{ scaleY: scrollYProgress }}
+              className="absolute left-75 max-xl:left-20 -translate-x-1/2 top-0 inset-y-0 w-[1px] 
+    bg-gradient-to-b from-[#FF773C80] via-[#FF773C80] to-[#FF773C50] 
+    origin-top rounded-full"
+            />
+            <motion.div
+              style={{ scaleY: extendedScroll }}
+              className="absolute left-1/2 -translate-x-1/2 inset-y-0 w-[1px] 
+    bg-gradient-to-b from-[#FF773C80] via-[#FF773C80] to-[#FF773C50] 
+    origin-top rounded-full z-10"
+            />
 
-              <motion.div
-                style={{ scaleY: scrollYProgress }}
-                className="absolute right-75 max-xl:right-20 top-0 -translate-x-1/2 inset-y-0 w-[1px] 
-      bg-gradient-to-b from-[#FF773C80] via-[#FF773C80] to-[#FF773C50] 
-      origin-top rounded-full"
-              />
-            </div>
-          )}
-        </div>
+            <motion.div
+              style={{ scaleY: scrollYProgress }}
+              className="absolute right-75 max-xl:right-20 top-0 -translate-x-1/2 inset-y-0 w-[1px] 
+    bg-gradient-to-b from-[#FF773C80] via-[#FF773C80] to-[#FF773C50] 
+    origin-top rounded-full"
+            />
+          </div>
+        )}
 
         <div
-          ref={ref}
-          className="z-11 text-white min-h-screen px-16 max-xl:px-6  relative pb-20 w-full "
+          className="z-30 text-white min-h-screen px-16 max-xl:px-6  relative pb-20 w-full "
         >
           <div className={`${isPage ? 'max-lg:-mt-40' : 'lg:mt-20'}  z-10 flex flex-col  xl:mx-auto    `}>
             <h2 className="xl:-mt-60 text-3xl lg:text-5xl font-medium -mt-20 mb-16 max-xl:mt-12 ">
