@@ -72,7 +72,7 @@ export default function RecentWork({
   });
   // useTransform(scrollYProgress, (v) => v + 130 / ref?.current?.offsetHeight) was causing the line to go "beyond"
   const extendedScroll = useTransform(scrollYProgress, (v) => v + 130 / ref?.current?.offsetHeight)
-  // scrollYProgress;
+
 
 
   const { id } = router.query;

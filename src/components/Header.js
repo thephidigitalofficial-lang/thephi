@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React, { useState, useEffect, useRef } from "react";
 import MenuBar from "./MenuBar";
-import logo from "@/../public/images/test.svg";
+import logo from "@/../public/images/newLogo.svg";
 import { useRouter } from "next/router";
 
 function Header() {
@@ -44,9 +44,8 @@ function Header() {
 
   return (
     <header
-      className={`flex items-center fixed top-0 left-0 right-0 z-50 justify-between p-4 pt-4 bg-gradient-to-b from-[#1D1D20] to-transparent transition-transform duration-300 ${
-        isVisible ? "translate-y-0" : "-translate-y-full"
-      }`}
+      className={`flex items-center fixed top-0 left-0 right-0 z-50 justify-between p-4 pt-4 bg-gradient-to-b from-[#1D1D20] to-transparent transition-transform duration-300 ${isVisible ? "translate-y-0" : "-translate-y-full"
+        }`}
     >
       <Image
         alt="logo"

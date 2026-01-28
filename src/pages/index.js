@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import logo from "@/../public/images/test.svg";
+import logo from "@/../public/images/newLogo.svg";
 import TextCarousel from "@/components/TextCarousel";
 import Capabilities from "@/components/Capabilities";
 import Stepper from "@/components/Stepper";
@@ -66,7 +66,7 @@ export default function PhiLandingPage({ services = [] }) {
         ref={ref}
         className="min-h-screen z-1   relative    max-xl:p-4 pb-1      flex flex-col justify-between max-xl:justify-start"
       >
-        <Image alt="logo" src={logo} className="w-45 m-6 z-2 max-xl:hidden" />
+        <Image alt="logo" src={logo} className="w-50 m-6 z-2 max-xl:hidden" />
         <div className="absolute top-4 z-20 w-full xl:hidden">
           <Header />
         </div>
