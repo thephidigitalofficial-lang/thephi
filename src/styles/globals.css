@@ -19,7 +19,12 @@ body {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
 }
+
+ 
 
 textarea:focus {
   border: none;

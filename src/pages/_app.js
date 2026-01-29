@@ -1,7 +1,7 @@
 import "@/styles/globals.css";
 import "@/styles/button.css";
 
-// import useLocoScroll from "@/hooks/useLocoScroll";
+import useSmoothScroll from "@/hooks/useSmoothScroll";
 import "aos/dist/aos.css";
 import AOS from "aos";
 import { Provider, useSelector } from "react-redux";
@@ -15,19 +15,13 @@ import Head from "next/head";
 import { Toaster } from "sonner";
 
 export default function App({ Component, pageProps }) {
-  // useLocoScroll(true, {
-  //   smooth: true,
-  //   multiplier: 0.5,
-  //   // breakpoint config example (fix mobile issues)
-  //   smartphone: { smooth: false },
-  //   tablet: { smooth: true, breakpoint: 1024 },
-  // });
+  useSmoothScroll();
 
   useEffect(() => {
     AOS.init({
-      duration: 1000, // animation duration in ms
-      easing: "ease-in-out", // animation easing
-      once: true, // whether animation should happen only once
+      duration: 1000,
+      easing: "ease-in-out",
+      once: true,
     });
   }, []);
 
@@ -70,7 +64,7 @@ const AppComponent = ({ Component, pageProps }) => {
     excludedPaths.find((location) => location != currentLocation);
 
   return (
-    <div data-scroll-container className="bg-[#1D1D20]">
+    <div className="bg-[#1D1D20]">
       <SignInDialog />
       <div className="flex">
         {showChatBot && (
@@ -78,13 +72,12 @@ const AppComponent = ({ Component, pageProps }) => {
             id="botContainer"
             className={` ${" xl:sticky fixed z-100  max-xl:w-full  top-0  xl:min-w-[35%] opacity-100 h-fit"}`}
           >
-            <ChatBox message={query} onClose={() => {}} />
+            <ChatBox message={query} onClose={() => { }} />
           </div>
         )}
         <div
-          className={`bg-[#00000D] ${
-            showChatBot ? "xl:w-[65%] max-xl:w-full" : "w-full"
-          }`}
+          className={`bg-[#00000D] ${showChatBot ? "xl:w-[65%] max-xl:w-full" : "w-full"
+            }`}
         >
           <Component {...pageProps} />
         </div>

@@ -6,6 +6,8 @@ export default function Footer() {
     <footer className="relative text-white overflow-hidden   bg-black/30 min-h-[60vh]   flex items-end">
       <Image
         src={footerImage}
+        unoptimized
+        priority
         alt=""
         className="absolute  max-h-[110%] flex justify-end items-end w-full b-20 "
       />

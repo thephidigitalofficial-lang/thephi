@@ -28,10 +28,9 @@ const ProjectCard = ({ project, index, router }) => {
         } relative max-xl:w-full xl:aspect-[4/3] rounded-[20px] overflow-hidden cursor-pointer group`}
     >
       <Image
-        width={0}
-        unoptimized
-        priority
-        height={0}
+        width={800}
+        height={600}
+        priority={index < 2}
         src={project?.image}
         alt={project.title}
         className="w-full h-full object-cover transition-transform duration-500  "
