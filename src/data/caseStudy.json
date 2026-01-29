@@ -7,7 +7,7 @@
         "skills": "Design & Development",
         "technology": "MERN Stack, MongoDB, Express.js, React.js, Node.js, Google Cloud Platform (GCP), Firebase.",
         "status": "Delivered and Ongoing Maintenance",
-        "image": "/images/projects/clout.jpg"
+        "image": "/images/projects/clout.webp"
     },
     {
         "id": 2,
@@ -17,7 +17,7 @@
         "skills": "AI Agentic Market Place",
         "technology": "AI Agentic Models, Web Speech API, MERN Stack, MongoDB, Node.js, React.js, Google Cloud Platform (GCP), Tailwind CSS, Framer Motion.",
         "status": "Ongoing",
-        "image": "/images/projects/medFlow.jpg"
+        "image": "/images/projects/medFlow.webp"
     },
     {
         "id": 3,
@@ -27,7 +27,7 @@
         "skills": "Website Development",
         "technology": "HTML5, CSS3, JavaScript (ES6+), WordPress (Custom CMS), PHP, MySQL, GSAP (for smooth animations), Responsive Design Frameworks.",
         "status": "2 months",
-        "image": "/images/projects/creative.jpg"
+        "image": "/images/projects/creative.webp"
     },
     {
         "id": 4,
@@ -37,6 +37,6 @@
         "skills": "ERP Architecture, Workflow Automation, Procurement Logic Design, User Access Control (RBAC), Resource Management Modules, Dashboard Analytics.",
         "technology": "MERN Stack (MongoDB, Express.js, React, Node.js), Redux for State Management, AWS S3 for Document Storage, Google Cloud Platform (GCP), RESTful API Integration, JWT Authentication.",
         "status": "Developed and Ongoing Maintenance",
-        "image": "/images/projects/buildLogic.jpg"
+        "image": "/images/projects/buildLogic.webp"
     }
 ]
