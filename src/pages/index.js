@@ -187,18 +187,18 @@ export default function PhiLandingPage({ services = [] }) {
               <TextCarousel />
             </div>
 
-            <div className="  z-2 relative overflow-visible max-xl:overflow-hidden  bg-[#00000D] ">
-              <div className="moveRadial animate xl:-top-20 max-xl:-top-0 xl:left-[40%] left-[14%] h-full min-w-80 max-w-full" />
-              <div className="radial animate absolute z-10 xl:-top-3 max-xl:-top-0 min-h-full min-w-2/3 max-lg:hidden  max-w-full" />
+            <div className="z-2 relative overflow-visible   bg-[#00000D]">
+              <div className="moveRadial animate -top-20 xl:left-[40%]   left-[14%] h-full min-w-80 max-w-full" />
+              <div className="radial animate absolute z-10 xl:-top-3 xl:min-h-full xl:min-w-2/3 max-xl:top-20 max-xl:right-0 max-xl:w-[80%] max-xl:h-[300px] max-w-full" />
 
-              <div className="flex flex-col bg-[#00000D] ">
+              <div className="flex flex-col bg-[#00000D]">
                 <Capabilities services={services} />
               </div>
             </div>
 
-            <div className="  z-2 relative overflow-visible max-xl:overflow-hidden  bg-[#00000D] ">
-              <div className="moveRadial animate xl:-top-20 max-xl:-top-0 xl:left-[40%] -top-20 left-[14%] h-full min-w-80 max-w-full" />
-              <div className="radial animate absolute z-10   top-200 xl:-top-3 max-xl:-top-0 mt-120 h-1/2 bottom-0  min-w-2/4   max-w-full" />
+            <div className="  z-2 relative overflow-visible      bg-[#00000D] ">
+              <div className="moveRadial animate   xl:left-[40%] -top-20 left-[14%] h-full min-w-80 max-w-full" />
+              <div className="radial animate absolute z-10   top-200 xl:-top-3 max-xl:-top-0 mt-120 h-1/2 bottom-0  min-w-2/4    max-w-full" />
               <div className="flex flex-col  ">
                 <RecentWork isPage />
 
@@ -213,7 +213,7 @@ export default function PhiLandingPage({ services = [] }) {
             </div>
 
             <div className="  z-2 relative overflow-visible max-xl:overflow-hidden  bg-[#00000D] ">
-              <div className="moveRadial animate xl:-top-20 max-xl:-top-0 xl:left-[40%] left-[14%] h-full min-w-80 max-w-full" />
+              <div className="moveRadial animate xl:-top-20 max-xl:-top-40 xl:left-[40%] left-[14%] h-full min-w-80 max-w-full" />
               <div className="radial animate absolute z-10 xl:-top-3 max-xl:-top-0 min-h-full min-w-2/3   max-w-full" />
 
               <div className="flex flex-col bg-[#00000D] ">

@@ -102,6 +102,34 @@ textarea:focus {
   }
 }
 
+@keyframes moveGlowSlowMobile {
+  0% {
+    
+    opacity: 0.8;
+  }
+  25% {
+   
+    opacity: 0.9;
+  }
+  50% {
+     
+    opacity: 1;
+  }
+  75% {
+    
+    opacity: 0.85;
+  }
+  100% { 
+    opacity: 0;
+  }
+}
+
+@media (max-width: 1280px) {
+  .radial.animate {
+    animation: moveGlowSlowMobile 20s ease-in-out infinite alternate;
+  }
+}
+
 /* Outer container with drop-shadow */
 .button-container {
   /* Based on "Button" layer */
