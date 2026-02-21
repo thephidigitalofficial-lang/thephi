@@ -1,0 +1,91 @@
+# ============================================
+# robots.txt for thephi.digital
+# Last updated: 2026-02-21
+# ============================================
+
+# ---- Default: Allow all crawlers ----
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /protected/
+
+# ---- Google Search ----
+User-agent: Googlebot
+Allow: /
+
+# ---- Bing / Microsoft ----
+User-agent: Bingbot
+Allow: /
+
+# ---- Google AI / Gemini (Google-Extended) ----
+User-agent: Google-Extended
+Allow: /
+
+# ---- OpenAI / ChatGPT ----
+User-agent: GPTBot
+Allow: /
+
+# ---- OpenAI ChatGPT Browse ----
+User-agent: ChatGPT-User
+Allow: /
+
+# ---- Anthropic / Claude ----
+User-agent: anthropic-ai
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-Web
+Allow: /
+
+# ---- Meta AI ----
+User-agent: FacebookBot
+Allow: /
+User-agent: Meta-ExternalAgent
+Allow: /
+User-agent: meta-externalagent
+Allow: /
+
+# ---- Perplexity AI ----
+User-agent: PerplexityBot
+Allow: /
+
+# ---- Cohere AI ----
+User-agent: cohere-ai
+Allow: /
+
+# ---- Apple / Applebot (Siri, Apple Intelligence) ----
+User-agent: Applebot
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+
+# ---- Common Crawl (used by many AI models) ----
+User-agent: CCBot
+Allow: /
+
+# ---- ByteDance / Bytespider ----
+User-agent: Bytespider
+Allow: /
+
+# ---- Amazon / Amazonbot ----
+User-agent: Amazonbot
+Allow: /
+
+# ---- Yandex ----
+User-agent: YandexBot
+Allow: /
+
+# ---- DuckDuckBot ----
+User-agent: DuckDuckBot
+Allow: /
+
+# ---- You.com AI ----
+User-agent: YouBot
+Allow: /
+
+# ---- Brave Search ----
+User-agent: BraveBot
+Allow: /
+
+# ---- Sitemap ----
+Sitemap: https://thephi.digital/sitemap.xml
