@@ -19,6 +19,7 @@ import { useInView } from "framer-motion";
 import { getServices } from "../../lib/serviceUtils";
 import Header from "@/components/Header";
 import Head from "next/head";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 export default function PhiLandingPage({ services = [] }) {
   const [query, setQuery] = useState("");
@@ -43,6 +44,9 @@ export default function PhiLandingPage({ services = [] }) {
     }
   }, []);
 
+
+  const isMobile = useIsMobile()
+  // const isMobile = window?.innerWidth < 1280;
   return (
     <div className="bg-[#1D1D20] ">
       <Head>
@@ -172,8 +176,9 @@ export default function PhiLandingPage({ services = [] }) {
                 </div>
 
                 <TextFadeUpScroll
+                  key={isMobile}
                   className="  text-start"
-                  text={`We turn your boldest visions into reality. We are \nthe architects of your digital future, building\ninnovative solutions that stand tall.`}
+                  text={`We turn your boldest visions into reality. We are ${isMobile ? '' : '\n'}the architects of your digital future, building ${isMobile ? '' : '\n'}innovative solutions that stand tall.`}
                 />
 
                 <TextFadeUpScroll
@@ -233,14 +238,13 @@ export default function PhiLandingPage({ services = [] }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps(props) {
   try {
     const services = await getServices();
     return {
       props: {
         services,
-      },
-      revalidate: 60,
+      }
     };
   } catch (error) {
     console.error("Error fetching services for home page:", error);

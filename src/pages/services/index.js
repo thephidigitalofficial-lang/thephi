@@ -291,14 +291,13 @@ function Index({ sectionsData }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps(props) {
   try {
     const sectionsData = await getServices();
     return {
       props: {
         sectionsData,
-      },
-      revalidate: 60, // Revalidate every 60 seconds
+      } // Revalidate every 60 seconds
     };
   } catch (error) {
     console.error("Error fetching services:", error);

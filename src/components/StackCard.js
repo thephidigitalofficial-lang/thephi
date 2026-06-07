@@ -21,7 +21,7 @@ const StackCard = ({ card, index, scrollProgress, activeCardIndex }) => {
       1
     );
 
-    const isMobile = window.innerWidth < 768; // Mobile check
+    const isMobile = window?.innerWidth < 768; // Mobile check
 
     const paddingOffset = isMobile ? 15 : 30; // Reduced horizontal offset for mobile
     const verticalStackOffset = 25;

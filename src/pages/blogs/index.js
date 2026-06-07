@@ -110,23 +110,21 @@ export default function App({ blogs = [] }) {
   </div>
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps(props) {
   try {
     const blogs = await getAllBlogs();
 
     return {
       props: {
         blogs: blogs || [],
-      },
-      revalidate: 60, // Revalidate every 60 seconds
+      } // Revalidate every 60 seconds
     };
   } catch (error) {
     console.error('Error fetching blogs:', error);
     return {
       props: {
         blogs: [],
-      },
-      revalidate: 60,
+      }
     };
   }
 }

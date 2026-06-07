@@ -237,7 +237,7 @@ const MenuBar = forwardRef(({ placement = "auto", align = "center", offset = 8 }
 
     const menuEl = menuRef.current;
     const menuRect = menuEl.getBoundingClientRect();
-    const isMobile = window.innerWidth < 1280; // xl breakpoint
+    const isMobile = window?.innerWidth < 1280; // xl breakpoint
 
     // For fixed positioning, we use viewport coordinates (no scroll offsets needed)
 
